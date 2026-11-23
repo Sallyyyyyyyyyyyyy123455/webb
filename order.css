@@ -1,0 +1,53 @@
+.order-page { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.order-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.order-composition h2, .order-form-container h2 {
+    font-family: 'Press Start 2P'; color: #fca311; font-size: 16px;
+    text-align: center; margin-bottom: 20px; text-shadow: 0 0 5px #fca311;
+}
+.items-list { display: flex; flex-direction: column; gap: 15px; }
+.order-card {
+    display: flex; align-items: center; background-color: #fca311;
+    border-radius: 15px; padding: 15px; color: #000;
+}
+.order-card img { width: 80px; height: 80px; object-fit: cover; border-radius: 10px; border: 2px solid #000; }
+.order-card .name { flex-grow: 1; margin: 0 15px; font-family: 'Dela Gothic One'; font-size: 16px; }
+.order-card .price { font-family: 'Press Start 2P'; color: tomato; font-size: 14px; margin-right: 15px; }
+.remove-btn {
+    font-family: 'Press Start 2P'; background-color: tomato; color: #fff;
+    border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; font-size: 10px;
+}
+.hidden { display: none !important; }
+.empty-order-msg { font-family: 'Dela Gothic One'; color: #fff; text-align: center; }
+.empty-order-msg a { color: #fca311; }
+
+.order-form-container form {
+    background-color: #1e1e1e; padding: 30px; border-radius: 20px; border: 2px solid #444;
+}
+.form-summary { background-color: #121212; padding: 20px; border-radius: 10px; margin-bottom: 20px; border: 1px solid #444; }
+.form-summary p { font-family: 'Dela Gothic One'; color: #fff; display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px;}
+.form-summary p span { font-family: 'Press Start 2P'; color: tomato; font-size: 12px;}
+.summary-total { margin-top: 15px; padding-top: 15px; border-top: 2px solid #444; display: flex; justify-content: space-between; align-items: center;}
+.summary-total h4 { font-family: 'Press Start 2P'; color: #fca311; font-size: 14px; margin: 0;}
+.summary-total p { font-family: 'Press Start 2P'; color: tomato; font-size: 18px; margin: 0;}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-family: 'Dela Gothic One'; font-size: 14px; color: #fff; margin-bottom: 8px;}
+.form-group input, .form-group textarea {
+    width: 100%; padding: 15px; background-color: #121212; border: 2px solid #444; border-radius: 10px; color: #fff; font-family: 'Dela Gothic One';
+}
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: #fca311; }
+.checkbox-group { display: flex; align-items: center; gap: 10px; }
+.checkbox-group input { width: 20px; height: 20px; accent-color: #fca311; }
+.delivery-time { border: 2px solid #444; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
+.delivery-time legend { color: #fca311; font-family: 'Dela Gothic One'; padding: 0 10px;}
+.delivery-time label { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; color: #fff; font-family: 'Dela Gothic One';}
+.delivery-time input[type="radio"] { width: 18px; height: 18px; accent-color: #fca311;}
+.btn-submit {
+    width: 100%; font-family: 'Press Start 2P'; padding: 15px; border-radius: 10px; cursor: pointer;
+    background-color: #fca311; color: #000; border: none; transition: 0.3s; font-size: 12px;
+}
+.btn-submit:hover { background-color: tomato; color: #fff; }
+
+@media (max-width: 800px) {
+    .order-container { grid-template-columns: 1fr; }
+}

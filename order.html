@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШАУРМА PRO — Оформление</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+    <header>
+        <h1>ШАУРМА PRO</h1>
+        <nav>
+            <a href="landing.html">Главная</a>
+            <a href="index.html">О нас</a>
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="order.html" class="active">Оформить заказ</a>
+            <a href="history.html">Мои заказы</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="order-page">
+        <div class="order-container">
+            <section class="order-composition">
+                <h2>Состав заказа</h2>
+                <div id="order-items-list" class="items-list"></div>
+                <p id="empty-order-msg" class="hidden">
+                    Ничего не выбрано. Чтобы добавить блюда, перейдите на <a href="lunch.html">Собрать ланч</a>.
+                </p>
+            </section>
+
+            <section class="order-form-container">
+                <h2>Оформление заказа</h2>
+                <form id="checkout-form" class="hidden">
+                    <div class="form-summary" id="form-summary"></div>
+                    
+                    <div class="form-group">
+                        <label for="comment">Комментарий</label>
+                        <textarea id="comment" name="comment" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Имя *</label>
+                        <input type="text" id="name" name="full_name" required placeholder="Иван">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="ivan@example.com">
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="subscribe" name="subscribe" value="1" checked>
+                        <label for="subscribe">Подписаться на рассылку</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Адрес *</label>
+                        <input type="text" id="address" name="delivery_address" required placeholder="ул. Ленина, д. 1">
+                    </div>
+                    <fieldset class="form-group delivery-time">
+                        <legend>Время доставки *</legend>
+                        <label><input type="radio" name="delivery_type" value="now" required> Ближайшее время</label>
+                        <label><input type="radio" name="delivery_type" value="by_time"> Ко времени</label>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="exact_time">Укажите время</label>
+                        <input type="time" id="exact_time" name="delivery_time" min="07:00" max="23:00" step="300">
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Отправить заказ</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer id="contacts">
+        <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
+    </footer>
+
+    <script src="dishes.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
